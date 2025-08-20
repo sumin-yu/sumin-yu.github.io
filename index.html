@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sumin Yu — CV & Research</title>
+  <meta name="description" content="Sumin Yu — M.S./Ph.D. student at Seoul National University (M.IN.D Lab). Research interests: AI safety and trustworthiness, algorithmic fairness, bias, harmful content in generative models, privacy risks; AI governance and accountability." />
+  <meta property="og:title" content="Sumin Yu — CV & Research" />
+  <meta property="og:description" content="AI safety & trustworthiness; fairness, bias, harmful content, privacy risks; governance & accountability." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#0b1020;           /* page background */
+      --panel:#0f172a;        /* content background */
+      --text:#e5e7eb;         /* base text */
+      --muted:#9ca3af;        /* secondary text */
+      --accent:#60a5fa;       /* links & highlights */
+      --rule:#1f2937;         /* section rule */
+      --card:#0b1325;         /* cards */
+      --pill:#111827;         /* tag pill */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, #1e293b55, transparent) ,
+                  radial-gradient(1000px 600px at 110% 10%, #0ea5e955, transparent) ,
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:960px; margin:0 auto; padding:28px 20px 80px}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(10px);
+      background: linear-gradient(180deg, rgba(11,16,32,.85), rgba(11,16,32,.65));
+      border-bottom:1px solid #1f2937; box-shadow:var(--shadow);
+    }
+    .nav{display:flex; align-items:center; gap:18px; justify-content:space-between; padding:12px 20px; max-width:960px; margin:0 auto}
+    .brand{display:flex; align-items:center; gap:12px}
+    .avatar{width:40px; height:40px; border-radius:50%; background:#111827; border:1px solid #1f2937}
+    .name{font-weight:700; letter-spacing:.2px}
+    .links a{margin:0 8px; font-size:14px; opacity:.9}
+    .hero{margin-top:28px; background:var(--panel); border:1px solid #1f2937; padding:28px; border-radius:16px; box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 10px; font-size:32px}
+    .hero .role{color:var(--muted); margin-top:6px}
+    .hero .meta{margin-top:10px; color:var(--muted); font-size:15px}
+    .button{
+      display:inline-block; padding:10px 14px; border-radius:12px; background:linear-gradient(180deg,#60a5fa,#3b82f6);
+      color:white; font-weight:600; box-shadow:0 6px 18px rgba(59,130,246,.35);
+    }
+    .grid{display:grid; grid-template-columns:1fr; gap:20px; margin-top:22px}
+    @media(min-width:840px){ .grid{grid-template-columns:1fr 1fr} }
+    section{background:var(--panel); border:1px solid #1f2937; border-radius:16px; padding:22px; box-shadow:var(--shadow)}
+    h2{margin:0 0 12px; font-size:20px; display:flex; align-items:center; gap:10px}
+    .rule{height:1px; background:var(--rule); margin:10px 0 16px}
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
+    .pub{margin:12px 0; padding:12px; background:var(--card); border:1px solid #1f2937; border-radius:12px}
+    .pub .title{font-weight:700}
+    .kvs{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .pill{font-size:12px; padding:6px 10px; background:var(--pill); border:1px solid #1f2937; border-radius:999px; color:var(--muted)}
+    footer{margin-top:28px; color:var(--muted); font-size:13px; text-align:center}
+    .small{font-size:14px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="name">Sumin Yu</div>
+      </div>
+      <div class="links" aria-label="Site">
+        <a href="#about">About</a>
+        <a href="#interests">Research</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#activities">Activities</a>
+        <a href="#awards">Awards</a>
+        <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="hero">
+      <h1>Sumin Yu</h1>
+      <div class="role">M.S./Ph.D. student (Advisor: Taesup Moon)</div>
+      <div class="meta">Machine Intelligence and Data science Lab (M.IN.D Lab), Seoul National University</div>
+      <div class="meta">Email: <a href="mailto:ysmsoomin@snu.ac.kr">ysmsoomin@snu.ac.kr</a></div>
+      <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="button" href="cv.pdf" target="_blank" rel="noopener">📄 View CV (PDF)</a>
+        <!-- Add external links if desired:
+        <a class="button" href="#">Google Scholar</a>
+        <a class="button" href="#">LinkedIn</a>
+        -->
+      </div>
+      <div class="kvs">
+        <span class="pill">AI Safety</span>
+        <span class="pill">Fairness & Bias</span>
+        <span class="pill">Generative Models</span>
+        <span class="pill">Privacy</span>
+        <span class="pill">AI Governance</span>
+        <span class="pill">Accountability</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section id="interests">
+        <h2>Research Interests</h2>
+        <div class="rule"></div>
+        <ul>
+          <li>Ensuring safe and trustworthy AI, with a focus on algorithmic fairness, bias, harmful content in generative models, and privacy risks.</li>
+          <li>AI governance and accountability for responsible and trustworthy AI.</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="rule"></div>
+        <ul>
+          <li><strong>M.S./Ph.D.</strong> (2023.03 – Present) — Advisor: Taesup Moon<br/>
+            Dept. of Electrical and Computer Engineering, Seoul National University</li>
+          <li><strong>B.S.</strong> (2019.03 – 2023.02) — Dept. of Electrical and Computer Engineering, Seoul National University<br/>
+            GPA: 3.95/4.3</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <div class="rule"></div>
+        <div class="pub">
+          <div class="title">Do Counterfactually Fair Image Classifiers Satisfy Group Fairness? – A Theoretical and Empirical Study</div>
+          <div class="small">Sangwon Jung*, <strong>Sumin Yu*</strong>, Sanghyuk Chun, Taesup Moon (* equal contribution)</div>
+          <div class="small">Neural Information Processing Systems (NeurIPS), December 2024</div>
+          <!-- Optional: add a paper link when available
+          <div style="margin-top:8px"><a href="#" target="_blank" rel="noopener">Paper</a> · <a href="#" target="_blank" rel="noopener">Code</a> · <a href="#" target="_blank" rel="noopener">BibTeX</a></div>
+          -->
+        </div>
+      </section>
+
+      <section id="activities">
+        <h2>Activities & Leadership</h2>
+        <div class="rule"></div>
+        <ul>
+          <li>2022.09 – 2023.08 — SNU Tomorrow’s Edge Membership (STEM), Honor Society (College of Engineering, SNU)</li>
+          <li>2019.09 – 2020.08 — Student Society for Social Responsibility, SNU Social Responsibility (SNUSR)<br/>
+            Member (2019.09 – 2020.08); President (2020.01 – 2020.08)</li>
+        </ul>
+      </section>
+
+      <section id="awards">
+        <h2>Honors & Awards</h2>
+        <div class="rule"></div>
+        <ul>
+          <li>2023.02 — SNU <em>Summa Cum Laude</em> (Dept. of ECE, Seoul National University)</li>
+          <li>2019.03 – 2023.02 — Full scholarship, Cho Chang-seok Cultural Foundation</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Sumin Yu · Seoul National University · Built with GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
