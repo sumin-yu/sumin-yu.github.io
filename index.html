@@ -39,7 +39,7 @@
     }
     .nav{display:flex; align-items:center; gap:18px; justify-content:space-between; padding:12px 20px; max-width:960px; margin:0 auto}
     .brand{display:flex; align-items:center; gap:12px}
-    .avatar{width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid var(--accent)}
+    .avatar{width:40px; height:40px; border-radius:50%; background:#e0f2fe; border:2px solid var(--accent)}
     .name{font-weight:700; letter-spacing:.2px; color:var(--accent)}
     .links a{margin:0 8px; font-size:14px; opacity:.9}
     .hero{margin-top:28px; background:linear-gradient(135deg, #dbeafe, #ffffff); border:1px solid #bfdbfe; padding:28px; border-radius:16px; box-shadow:var(--shadow)}
@@ -60,44 +60,33 @@
   </style>
 </head>
 <body>
-
-  <!-- ✅ 네비게이션 + 사진 -->
-  <header>
-    <nav class="nav">
-      <div class="brand">
-        <img src="sumin.jpeg" alt="Sumin Yu" class="avatar" />
-        <div class="name">Sumin Yu</div>
-      </div>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#interests">Research</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#activities">Activities</a>
-        <a href="#awards">Awards</a>
-        <a href="cv_suminyu.pdf" target="_blank">CV</a>
-      </div>
-    </nav>
-  </header>
-
   <main class="wrap">
-    <section id="about" class="hero">
-      <h1>Sumin Yu</h1>
-      <div class="role">M.S./Ph.D. student (Advisor: Taesup Moon)</div>
-      <div class="meta">Machine Intelligence and Data science Lab (M.IN.D Lab), Seoul National University</div>
-      <div class="meta">Email: <a href="mailto:ysmsoomin@snu.ac.kr">ysmsoomin@snu.ac.kr</a></div>
-      <div style="margin-top:14px; display:flex; flex-direction:column; gap:6px;">
-        <a href="cv_suminyu.pdf" target="_blank" rel="noopener">📄 View CV (PDF)</a>
-      </div>
-      <div class="kvs">
-        <span class="pill">AI Safety</span>
-        <span class="pill">Fairness & Bias</span>
-        <span class="pill">Generative Models</span>
-        <span class="pill">Privacy</span>
-        <span class="pill">AI Governance</span>
-        <span class="pill">Accountability</span>
-      </div>
-    </section>
+    <section id="about" class="hero" style="display:flex; align-items:center; gap:30px;">
+  <!-- 왼쪽: 텍스트 -->
+  <div style="flex:1;">
+    <h1>Sumin Yu</h1>
+    <div class="role">M.S./Ph.D. student (Advisor: Taesup Moon)</div>
+    <div class="meta">Machine Intelligence and Data science Lab (M.IN.D Lab), Seoul National University</div>
+    <div class="meta">Email: <a href="mailto:ysmsoomin@snu.ac.kr">ysmsoomin@snu.ac.kr</a></div>
+    <div style="margin-top:14px; display:flex; flex-direction:column; gap:6px;">
+      <a href="cv_suminyu.pdf" target="_blank" rel="noopener">📄 View CV (PDF)</a>
+    </div>
+    <div class="kvs">
+      <span class="pill">AI Safety</span>
+      <span class="pill">Fairness & Bias</span>
+      <span class="pill">Generative Models</span>
+      <span class="pill">Privacy</span>
+      <span class="pill">AI Governance</span>
+      <span class="pill">Accountability</span>
+    </div>
+  </div>
+
+  <!-- 오른쪽: 네모 사진 -->
+  <div>
+    <img src="sumin.jpeg" alt="Sumin Yu"
+         style="width:200px; height:240px; object-fit:cover; border-radius:8px; border:2px solid var(--accent);" />
+  </div>
+</section>
 
     <section id="interests">
       <h2>Research Interests</h2>
