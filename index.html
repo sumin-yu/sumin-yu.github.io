@@ -68,7 +68,7 @@
   }
 }
     .cv-list {
-  list-style: none;       /* 불릿 제거 */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -76,16 +76,30 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 8px 0;
+  margin: 12px 0;
 }
 .cv-left {
   flex: 1;
   padding-right: 12px;
 }
 .cv-right {
-  white-space: nowrap;    /* 줄바꿈 방지 */
+  white-space: nowrap;
   color: var(--muted);
   font-size: 14px;
+  min-width: 120px; /* PC에서 오른쪽 폭 확보 */
+  text-align: right;
+}
+
+/* 모바일 (화면폭 <= 768px)에서는 세로 배치 */
+@media (max-width: 768px) {
+  .cv-list li {
+    flex-direction: column;   /* 세로 배치 */
+    align-items: flex-start;  /* 왼쪽 정렬 */
+  }
+  .cv-right {
+    text-align: left;
+    margin-bottom: 4px;       /* 내용과 날짜 사이 여백 */
+  }
 }
   </style>
 </head>
@@ -133,19 +147,20 @@
   <div class="rule"></div>
   <ul class="cv-list">
     <li>
-      <div class="cv-left">
-        <strong>M.S./Ph.D.</strong> — Advisor: Taesup Moon<br/>
-        Dept. of Electrical and Computer Engineering, Seoul National University
-      </div>
       <div class="cv-right">2023.03 – Present</div>
+      <div class="cv-left">
+        <strong>M.S./Ph.D.</strong><br/>
+        Dept. of Electrical and Computer Engineering, Seoul National University
+         Advisor: Taesup Moon
+      </div>
     </li>
     <li>
+      <div class="cv-right">2019.03 – 2023.02</div>
       <div class="cv-left">
         <strong>B.S.</strong><br/>
         Dept. of Electrical and Computer Engineering, Seoul National University<br/>
         GPA: 3.95/4.3
       </div>
-      <div class="cv-right">2019.03 – 2023.02</div>
     </li>
   </ul>
 </section>
@@ -165,25 +180,25 @@
   <div class="rule"></div>
   <ul class="cv-list">
     <li>
+      <div class="cv-right">2022.09 – 2023.08</div>
       <div class="cv-left">
         SNU Tomorrow’s Edge Membership (STEM), Honor Society<br/>
         College of Engineering, SNU
       </div>
-      <div class="cv-right">2022.09 – 2023.08</div>
     </li>
     <li>
+      <div class="cv-right">2022.09 – 2023.02</div>
       <div class="cv-left">
         Research Intern, M.IN.D Lab, Seoul National University<br/>
         Supervised by Prof. Taesup Moon & Dr. Sangwon Jung
       </div>
-      <div class="cv-right">2022.09 – 2023.02</div>
     </li>
     <li>
+      <div class="cv-right">2019.09 – 2020.08</div>
       <div class="cv-left">
         Student Society for Social Responsibility, SNU Social Responsibility<br/>
         Member; President
       </div>
-      <div class="cv-right">2019.09 – 2020.08</div>
     </li>
   </ul>
 </section>
@@ -193,10 +208,11 @@
   <div class="rule"></div>
   <ul class="cv-list">
     <li>
-      <div class="cv-left">SNU <em>Summa Cum Laude</em></div>
       <div class="cv-right">2023.02</div>
+      <div class="cv-left">SNU <em>Summa Cum Laude</em></div>
     </li>
     <li>
+      <div class="cv-right">2019.03 – 2023.02</div>
       <div class="cv-left">Full scholarship, Cho Chang-seok Cultural Foundation</div>
       <div class="cv-right">2019.03 – 2023.02</div>
     </li>
