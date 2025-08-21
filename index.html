@@ -57,11 +57,21 @@
     .pill{font-size:12px; padding:6px 10px; background:var(--pill); border:1px solid #7dd3fc; border-radius:999px; color:#0369a1; font-weight:600}
     footer{margin-top:28px; color:var(--muted); font-size:13px; text-align:center}
     .small{font-size:14px; color:var(--muted)}
+    @media (max-width: 768px) {
+  #about {
+    flex-direction: column-reverse; /* 텍스트가 아래로, 사진이 위로 */
+    text-align: center; /* 가운데 정렬(옵션) */
+  }
+
+  #about img {
+    margin-bottom: 16px; /* 텍스트와 사진 사이 여백 */
+  }
+}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section id="about" class="hero" style="display:flex; align-items:center; gap:30px;">
+    <section id="about" class="hero" style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;">
   <!-- 왼쪽: 텍스트 -->
   <div style="flex:1;">
     <h1>Sumin Yu</h1>
@@ -84,7 +94,7 @@
   <!-- 오른쪽: 네모 사진 -->
   <div>
     <img src="sumin.jpeg" alt="Sumin Yu"
-         style="width:200px; height:240px; object-fit:cover; border-radius:8px; " />
+         style="width:200px; height:240px; object-fit:cover; border-radius:8px;" />
   </div>
 </section>
 
