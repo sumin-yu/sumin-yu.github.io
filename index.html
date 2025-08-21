@@ -67,6 +67,26 @@
     margin-bottom: 16px; /* 텍스트와 사진 사이 여백 */
   }
 }
+    .cv-list {
+  list-style: none;       /* 불릿 제거 */
+  padding: 0;
+  margin: 0;
+}
+.cv-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+.cv-left {
+  flex: 1;
+  padding-right: 12px;
+}
+.cv-right {
+  white-space: nowrap;    /* 줄바꿈 방지 */
+  color: var(--muted);
+  font-size: 14px;
+}
   </style>
 </head>
 <body>
@@ -109,16 +129,26 @@
     </section>
 
     <section id="education">
-      <h2>Education</h2>
-      <div class="rule"></div>
-      <ul>
-        <li><strong>M.S./Ph.D.</strong> (2023.03 – Present) — Advisor: Taesup Moon<br/>
-          Dept. of Electrical and Computer Engineering, Seoul National University</li>
-        <li><strong>B.S.</strong> (2019.03 – 2023.02)<br/>
-          Dept. of Electrical and Computer Engineering, Seoul National University<br/>
-          GPA: 3.95/4.3</li>
-      </ul>
-    </section>
+  <h2>Education</h2>
+  <div class="rule"></div>
+  <ul class="cv-list">
+    <li>
+      <div class="cv-left">
+        <strong>M.S./Ph.D.</strong> — Advisor: Taesup Moon<br/>
+        Dept. of Electrical and Computer Engineering, Seoul National University
+      </div>
+      <div class="cv-right">2023.03 – Present</div>
+    </li>
+    <li>
+      <div class="cv-left">
+        <strong>B.S.</strong><br/>
+        Dept. of Electrical and Computer Engineering, Seoul National University<br/>
+        GPA: 3.95/4.3
+      </div>
+      <div class="cv-right">2019.03 – 2023.02</div>
+    </li>
+  </ul>
+</section>
 
     <section id="publications">
       <h2>Publications</h2>
@@ -129,27 +159,49 @@
         <div class="small">Neural Information Processing Systems (NeurIPS), December 2024</div>
       </div>
     </section>
-
-    <section id="activities">
-      <h2>Activities & Leadership</h2>
-      <div class="rule"></div>
-      <ul>
-        <li>2022.09 – 2023.08 — SNU Tomorrow’s Edge Membership (STEM), Honor Society<br/>
-          College of Engineering, SNU</li>
-        <li>2019.09 – 2020.08 — Student Society for Social Responsibility, SNU Social Responsibility<br/>
-          Member (2019.09 – 2020.08); President (2020.01 – 2020.08)</li>
-      </ul>
-    </section>
-
-    <section id="awards">
-      <h2>Honors & Awards</h2>
-      <div class="rule"></div>
-      <ul>
-        <li>2023.02 — SNU <em>Summa Cum Laude</em></li>
-        <li>2019.03 – 2023.02 — Full scholarship, Cho Chang-seok Cultural Foundation</li>
-      </ul>
-    </section>
-
+    
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="rule"></div>
+  <ul class="cv-list">
+    <li>
+      <div class="cv-left">
+        SNU Tomorrow’s Edge Membership (STEM), Honor Society<br/>
+        College of Engineering, SNU
+      </div>
+      <div class="cv-right">2022.09 – 2023.08</div>
+    </li>
+    <li>
+      <div class="cv-left">
+        Research Intern, M.IN.D Lab, Seoul National University<br/>
+        Supervised by Prof. Taesup Moon & Dr. Sangwon Jung
+      </div>
+      <div class="cv-right">2022.09 – 2023.02</div>
+    </li>
+    <li>
+      <div class="cv-left">
+        Student Society for Social Responsibility, SNU Social Responsibility<br/>
+        Member; President
+      </div>
+      <div class="cv-right">2019.09 – 2020.08</div>
+    </li>
+  </ul>
+</section>
+    
+<section id="awards">
+  <h2>Honors & Awards</h2>
+  <div class="rule"></div>
+  <ul class="cv-list">
+    <li>
+      <div class="cv-left">SNU <em>Summa Cum Laude</em></div>
+      <div class="cv-right">2023.02</div>
+    </li>
+    <li>
+      <div class="cv-left">Full scholarship, Cho Chang-seok Cultural Foundation</div>
+      <div class="cv-right">2019.03 – 2023.02</div>
+    </li>
+  </ul>
+</section>
     <footer>
       © <span id="year"></span> Sumin Yu · Seoul National University · Built with GitHub Pages
     </footer>
